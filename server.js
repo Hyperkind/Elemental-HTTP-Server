@@ -21,7 +21,7 @@ var server = http.createServer(function requestHandler(req, res) {
         resource += req.url;
       }
 
-      fs.readFile(resource, function (err, data) {
+      fs.readFile(resource, 'utf8', function (err, data) {
         // If err, loads 404 page
         if (err) {
           console.log('Page cannot be found');
@@ -40,7 +40,7 @@ var server = http.createServer(function requestHandler(req, res) {
     // POST Case
     case 'POST':
     console.log('Processing POST request');
-
+    req.on()
 
     break;
   }
